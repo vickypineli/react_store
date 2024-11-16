@@ -5,6 +5,7 @@ import MyAccount from '../MyAccount'
 import MyOrders from '../MyOrders'  
 import MyOrder from '../MyOrder'
 import NotFound from '../NotFound'
+import Navbar from '../../components/Navbar'
 
 import '../../App.css'
 
@@ -25,6 +26,7 @@ const AppRouters  = () => {
   return (
     <BrowserRouter>
       <AppRouters />
+      <Navbar />
     </BrowserRouter>
   )
 }
