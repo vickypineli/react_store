@@ -17,7 +17,7 @@ const ProductDetail = () => {
             onClick={() => context.closeProductDetail()}></XMarkIcon>
             </div>
         </div>
-        {/* <figure className='px-6'>
+        <figure className='px-6'>
         <img
           className='w-full h-full rounded-lg'
           src={context.productToShow.images[0]}
@@ -27,7 +27,7 @@ const ProductDetail = () => {
         <span className='font-medium text-2xl mb-2'>${context.productToShow.price}</span>
         <span className='font-medium text-md'>${context.productToShow.title}</span>
         <span className='font-light text-sm'>${context.productToShow.description}</span>
-      </p> */}
+      </p>
         </aside>
     )
 }

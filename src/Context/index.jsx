@@ -1,20 +1,21 @@
 import { createContext, useState } from 'react'
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const ShoppingCartContext = createContext()
 
-// eslint-disable-next-line react/prop-types
 export const ShoppingCartProvider = ({children}) => {
+  // Shopping Cart · Increment quantity
   const [count, setCount] = useState(0)
+
+  // Product Detail · Open/Close
   const [isProductDetailOpen, setIsProductDetailOpen] = useState(false)
+  const openProductDetail = () => setIsProductDetailOpen(true)
+  const closeProductDetail = () => setIsProductDetailOpen(false)
 
-  const openProductDetail = () => {
-    setIsProductDetailOpen(true)
-  }
-  const closeProductDetail = () => {
-    setIsProductDetailOpen(false)
-  }
+  // Product Detail · Show product
+  const [productToShow, setProductToShow] = useState({})
 
+  // Shopping Cart · Add products to cart
+  const [cartProducts, setCartProducts] = useState([])
 
   return (
     <ShoppingCartContext.Provider value={{
@@ -22,7 +23,11 @@ export const ShoppingCartProvider = ({children}) => {
       setCount,
       openProductDetail,
       closeProductDetail,
-      isProductDetailOpen
+      isProductDetailOpen,
+      productToShow,
+      setProductToShow,
+      cartProducts,
+      setCartProducts
     }}>
       {children}
     </ShoppingCartContext.Provider>
