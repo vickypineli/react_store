@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 
 
 #pagina realizado con react y tailwind
+heroicons

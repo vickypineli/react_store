@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Layout from "../../components/Layout/index.jsx"
 import Card from "../../components/Card/index.jsx"
+import ProductDetail from "../../components/ProductDetail/index.jsx"
 
 function Home() {
     const [items, setItems] = useState(null)
@@ -11,7 +12,7 @@ function Home() {
         .then(response => response.json())
         .then(data => setItems(data))
     }, [])
-  console.log('items',items)
+
 
 
     return (
@@ -24,6 +25,7 @@ function Home() {
             ))
           }
         </div>
+        <ProductDetail />
       </Layout>
     )
   }
